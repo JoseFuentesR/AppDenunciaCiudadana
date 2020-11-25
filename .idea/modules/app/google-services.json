@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "34054583317",
+    "firebase_url": "https://denuncias-ciudadanas-30421.firebaseio.com",
+    "project_id": "denuncias-ciudadanas-30421",
+    "storage_bucket": "denuncias-ciudadanas-30421.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34054583317:android:acc1bf9d13a60039110a1c",
+        "android_client_info": {
+          "package_name": "com.example.appdenunciaciudadana"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34054583317-t2e86et5toj26p77m5apk6g4qkemce18.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.appdenunciaciudadana",
+            "certificate_hash": "66036beda9d0e6aeb960486aa681150d533ff9f6"
+          }
+        },
+        {
+          "client_id": "34054583317-era4djosg6uf3m48u5b8feuglv8t87nm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk3Xfus_yZcdR5j-u5O9Z0iBae7ZfBiYc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "34054583317-era4djosg6uf3m48u5b8feuglv8t87nm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

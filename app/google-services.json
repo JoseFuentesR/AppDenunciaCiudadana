@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "918215129127",
+    "firebase_url": "https://appfirebasedia-f1cd2.firebaseio.com",
+    "project_id": "appfirebasedia-f1cd2",
+    "storage_bucket": "appfirebasedia-f1cd2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918215129127:android:ecc14d46ac954d6ef8f602",
+        "android_client_info": {
+          "package_name": "com.example.appfirebasedia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918215129127-btpdho6ags3noe0nnsr7e84n92i0hp2t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe9nDmR8uXh5ciMCquT6_xRXV62q-ejYg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918215129127-btpdho6ags3noe0nnsr7e84n92i0hp2t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
