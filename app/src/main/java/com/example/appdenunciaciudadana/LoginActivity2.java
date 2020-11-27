@@ -23,9 +23,17 @@ public class LoginActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
 
-        txt_email = findViewById(R.id.login_email);
-        txt_password = findViewById(R.id.login_clave);
         auth = FirebaseAuth.getInstance();
+        if(auth.getCurrentUser() == null) {
+
+            setContentView(R.layout.activity_login2);
+            txt_email = findViewById(R.id.login_email);
+            txt_password = findViewById(R.id.login_clave);
+
+        }else{
+            Intent intent = new Intent(LoginActivity2.this,MainActivity.class);
+            startActivity(intent);
+        }
     }
 
     public void launch_register(View view) {
@@ -51,7 +59,7 @@ public class LoginActivity2 extends AppCompatActivity {
                                 finish();
                             } else {
                                 String msg = task.getException().getMessage();
-                                Toast.makeText(LoginActivity2.this msg, Toast.LENGTH_LONG).show();
+                                Toast.makeText(LoginActivity2.this,msg, Toast.LENGTH_LONG).show();
                             }
 
                             // ...

@@ -9,10 +9,13 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.appdenunciaciudadana.model.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity2 extends AppCompatActivity {
 
@@ -32,7 +35,7 @@ public class RegisterActivity2 extends AppCompatActivity {
     }
 
     public void create_account(View view) {
-        String email, name, phone, password;
+        final String email, name, phone, password;
         email = txt_email.getText().toString();
         name = txt_name.getText().toString();
         phone = txt_phone.getText().toString();
@@ -46,7 +49,16 @@ public class RegisterActivity2 extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(RegisterActivity2.this,"Cuenta Creada con exito",Toast.LENGTH_LONG).show();
+                                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                DatabaseReference myRef = database.getReference("usuarios");
+                                Usuario user = new Usuario();
+                                user.setEmail(email);
+                                user.setName(name);
+                                user.setPhone(phone);
+                                user.setUid(task.getResult().getUser().getUid());
+
+                                myRef.push().setValue(user);
+
                             } else {
                                 String msg = task.getException().getMessage();
                                 Toast.makeText(RegisterActivity2.this,msg,Toast.LENGTH_LONG).show();
